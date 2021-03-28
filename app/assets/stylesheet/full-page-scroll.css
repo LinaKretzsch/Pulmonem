@@ -26,10 +26,9 @@ nav {
 	min-height: 8vh;
 }
 
-.section1, .section2, .section3, .section4, .section5{
-	background-color: #111A28;
-
-
+.section1, .section2, .section3, .section4{
+	/* background-color: transparent; */
+	z-index: 0;
 }
 
 .section2 {
@@ -44,9 +43,6 @@ nav {
 
 }
 
-.section5 {
-
-}
 
 section div {
 	font-family: "Open Sans";
@@ -81,4 +77,9 @@ canvas {
 	width: 50%;
 	height: 50%;
 background-color: #888888;
+}
+
+#canvas {
+	z-index: 0;
+
 }
