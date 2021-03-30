@@ -24,15 +24,15 @@ function init()
   directionalLight.position.set(0,0,1);
   scene.add(directionalLight);
 
-  let redPointLight = new THREE.PointLight(0x54d86c, 2, 450, 80.7);
+  let redPointLight = new THREE.PointLight(0x54d86c, 5, 450, 100.7);
   redPointLight.position.set(100,300,100);
   scene.add(redPointLight);
 
-  let orangePointLight   = new THREE.PointLight(0x36aca6, 4, 450, 40.7);
+  let orangePointLight   = new THREE.PointLight(0x36aca6, 10, 450, 90.7);
   orangePointLight.position.set(300,300,100);
   scene.add(orangePointLight);
 
-  let bluePointLight = new THREE.PointLight(0xcc6600, 10, 450, 10.7);
+  let bluePointLight = new THREE.PointLight(0xcc6600, 15, 450, 50.7);
   bluePointLight.position.set(200,300,100);
   scene.add(bluePointLight);
 
