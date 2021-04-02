@@ -20,7 +20,7 @@ function init()
   scene.add(ambient);
 
   // Adding lights which adds colour
-  let directionalLight = new THREE.DirectionalLight(0xff8c19);
+  let directionalLight = new THREE.DirectionalLight(0x19FF8C, 10.00);
   directionalLight.position.set(0,0,1);
   scene.add(directionalLight);
 
@@ -70,9 +70,12 @@ function init()
 }
 function render() {
   cloudParticles.forEach(p=> {
-    p.rotation.z -= 0.001
+    p.rotation.z -= 0.003
   });
   renderer.render(scene,camera);
   requestAnimationFrame(render);
 }
+
+
+
 init();
