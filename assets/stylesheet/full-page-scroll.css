@@ -160,3 +160,11 @@ canvas {
 	object-fit: contain;
 	transition: color black;
 }
+
+#modelContent {
+	width: 80vw;
+	height: 40vw;
+	border-radius: 10px;
+	border-style: solid;
+	color: blue;
+}
