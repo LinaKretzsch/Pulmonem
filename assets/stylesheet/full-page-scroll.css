@@ -104,11 +104,6 @@ canvas {
   width: 50%;
   height: 50%;
   background-color: #888888;
-
-.section4 {
-	display: flex;
-	justify-content: center;
-	z-index: 1;
 }
 
 #canvas {
@@ -223,19 +218,6 @@ a:hover {
 
 }
 
-.forum {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	width: 90vw;
-	height: 40vw;
-	border: solid #b0f1ff;
-	border-radius: 10px;
-	border-width: thin;
-
-}
-
-#content1, #content2{
 
 #data {
   text-align: right;
