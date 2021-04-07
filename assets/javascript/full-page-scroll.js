@@ -3,7 +3,7 @@
  */
 (function () {
 	'use strict';
-	
+
 	/**
 	 * Full scroll main function
 	 */
@@ -13,13 +13,13 @@
 		 * @type {Object}
 		 */
 		var main = document.getElementById(params.mainElement);
-		
+
 		/**
 		 * Sections divclass
 		 * @type {Array}
 		 */
 		var sections = main.getElementsByTagName('section');
-		
+
 		/**
 		 * Full page scroll configurations
 		 * @type {Object}
@@ -31,8 +31,8 @@
 			animateFunction : params.animateFunction || 'ease',
 			maxPosition: sections.length - 1,
 			currentPosition: 0,
-			displayDots: typeof params.displayDots != 'undefined' ? params.displayDots : true,
-			dotsPosition: params.dotsPosition || 'left'
+			// displayDots: typeof params.displayDots != 'undefined' ? params.displayDots : true,
+			// dotsPosition: params.dotsPosition || 'left'
 		};
 
 		this.defaults = defaults;
@@ -48,7 +48,7 @@
 	fullScroll.prototype.init = function () {
 		this.buildPublicFunctions()
 			.buildSections()
-			.buildDots()
+			// .buildDots()
 			.addEvents();
 
 		var anchor = location.hash.replace('#', '').split('/')[0];
@@ -71,41 +71,41 @@
 
 	/**
 	 * Build dots navigation
-	 * @return {Object} this (fullScroll)
+	 // * @return {Object} this (fullScroll)
 	 */
-	fullScroll.prototype.buildDots = function () {		
-		this.ul = document.createElement('ul');
-		
-		this.ul.className = this.updateClass(1, 'dots', this.ul.className);
-		this.ul.className = this.updateClass(1, this.defaults.dotsPosition == 'right' ? 'dots-right' : 'dots-left', this.ul.className);
-
-		var _self = this;
-		var sections = this.defaults.sections;		
-
-		for (var i = 0; i < sections.length; i++) {
-			var li = document.createElement('li');
-			var a = document.createElement('a');
-		
-			a.setAttribute('href', '#' + i);			
-			li.appendChild(a);
-			_self.ul.appendChild(li);
-		}
-
-		this.ul.childNodes[0].firstChild.className = this.updateClass(1, 'active', this.ul.childNodes[0].firstChild.className);
-
-		if (this.defaults.displayDots) {
-			document.body.appendChild(this.ul);
-		}
-
-		return this;
-	};
+	// fullScroll.prototype.buildDots = function () {
+	// 	this.ul = document.createElement('ul');
+	//
+	// 	this.ul.className = this.updateClass(1, 'dots', this.ul.className);
+	// 	this.ul.className = this.updateClass(1, this.defaults.dotsPosition == 'right' ? 'dots-right' : 'dots-left', this.ul.className);
+	//
+	// 	var _self = this;
+	// 	var sections = this.defaults.sections;
+	//
+	// 	for (var i = 0; i < sections.length; i++) {
+	// 		var li = document.createElement('li');
+	// 		var a = document.createElement('a');
+	//
+	// 		a.setAttribute('href', '#' + i);
+	// 		li.appendChild(a);
+	// 		_self.ul.appendChild(li);
+	// 	}
+	//
+	// 	this.ul.childNodes[0].firstChild.className = this.updateClass(1, 'active', this.ul.childNodes[0].firstChild.className);
+	//
+	// 	if (this.defaults.displayDots) {
+	// 		document.body.appendChild(this.ul);
+	// 	}
+	//
+	// 	return this;
+	// };
 
 	/**
 	 * Add Events
 	 * @return {Object} this(fullScroll)
 	 */
 	fullScroll.prototype.addEvents = function () {
-		
+
 		if (document.addEventListener) {
 			document.addEventListener('mousewheel', this.mouseWheelAndKey, false);
 			document.addEventListener('wheel', this.mouseWheelAndKey, false);
@@ -122,15 +122,15 @@
 					document.body.style = "overflow: scroll;";
 					document.documentElement.style = "overflow: scroll;";
 				}
-			}			
+			}
 
 		} else {
 			document.attachEvent('onmousewheel', this.mouseWheelAndKey, false);
 			document.attachEvent('onkeyup', this.mouseWheelAndKey, false);
 		}
-		
+
 		return this;
-	};	
+	};
 
 	/**
 	 * Build public functions
@@ -142,12 +142,12 @@
 		var _self = this;
 
 		this.mouseWheelAndKey = function (event) {
-			if (event.deltaY > 0 || event.keyCode == 40) {	
+			if (event.deltaY > 0 || event.keyCode == 40) {
 				_self.defaults.currentPosition ++;
-				_self.changeCurrentPosition(_self.defaults.currentPosition);				
+				_self.changeCurrentPosition(_self.defaults.currentPosition);
 			} else if (event.deltaY < 0 || event.keyCode == 38) {
 				_self.defaults.currentPosition --;
-				_self.changeCurrentPosition(_self.defaults.currentPosition);	
+				_self.changeCurrentPosition(_self.defaults.currentPosition);
 			}
 			_self.removeEvents();
 		};
@@ -163,10 +163,10 @@
 				if (mTouchEnd > mTouchStart) {
 					_self.defaults.currentPosition --;
 				} else {
-					_self.defaults.currentPosition ++;					
+					_self.defaults.currentPosition ++;
 				}
 				_self.changeCurrentPosition(_self.defaults.currentPosition);
-			}			
+			}
 		};
 
 		this.hashChange = function (event) {
@@ -180,8 +180,8 @@
 					} else {
 						_self.defaults.currentPosition = anchor;
 						_self.animateScroll();
-					}					
-				}				
+					}
+				}
 			}
 		};
 
@@ -217,12 +217,12 @@
 			this.defaults.container.style.msTransition = 'all ' + animateTime + 's ' + animateFunction;
 			this.defaults.container.style.transition = 'all ' + animateTime + 's ' + animateFunction;
 
-			for (var i = 0; i < this.ul.childNodes.length; i++) {
-					this.ul.childNodes[i].firstChild.className = this.updateClass(2, 'active', this.ul.childNodes[i].firstChild.className);
-					if (i == this.defaults.currentPosition) {
-					this.ul.childNodes[i].firstChild.className = this.updateClass(1, 'active', this.ul.childNodes[i].firstChild.className);
-				}
-			}
+			// for (var i = 0; i < this.ul.childNodes.length; i++) {
+			// 		this.ul.childNodes[i].firstChild.className = this.updateClass(2, 'active', this.ul.childNodes[i].firstChild.className);
+			// 		if (i == this.defaults.currentPosition) {
+			// 		this.ul.childNodes[i].firstChild.className = this.updateClass(1, 'active', this.ul.childNodes[i].firstChild.className);
+			// 	}
+			// }
 		};
 
 		this.changeCurrentPosition = function (position) {
@@ -233,7 +233,7 @@
 		};
 
 		this.registerIeTags = function () {
-			document.createElement('section'); 
+			document.createElement('section');
 		};
 
 		this.updateClass = function (type, newClass, currentClass) {

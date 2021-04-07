@@ -61,7 +61,6 @@ function init()
       cloud.rotation.y = -0.12;
       cloud.rotation.z = Math.random()*2*Math.PI;
       cloud.material.opacity = 0.10;
-      console.log();
       cloudParticles.push(cloud);
       scene.add(cloud);
       }
@@ -71,7 +70,7 @@ function init()
 }
 function render() {
   cloudParticles.forEach(p=> {
-    p.rotation.z -= 0.003
+    p.rotation.z -= 0.002;
   });
   renderer.render(scene,camera);
   requestAnimationFrame(render);
