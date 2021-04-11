@@ -246,5 +246,6 @@
 
 		return this;
 	};
+
 	window.fullScroll = fullScroll;
 })();

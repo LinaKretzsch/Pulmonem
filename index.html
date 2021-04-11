@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Full page scroll</title>
+  <title>Pulmonem</title>
   <link rel="stylesheet" type="text/css" href="assets/stylesheet/full-page-scroll.css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
 
@@ -33,17 +33,26 @@
         <div class="contentRightWrapper">
 
           <div class="navBar">
-            <div><a href="">Dashboard</a></div>
-            <div><a href="">Warnings</a></div>
-            <div><a href="">Get_Dose</a></div>
-            <div><a href="">Instructions</a></div>
+            <div id="dashboard"><a>Dashboard</a></div>
+            <div id="warnings"><a>Warnings</a></div>
+            <div id="get_dose"><a>Get_Dose</a></div>
+            <div id="instructions"><a>Instructions</a></div>
           </div>
 
           <div class="content2">
-              <div id="data">
-                <h3>Data</h3>
-              </div>
+            <div id="dashboardData">
+              <h1>DASHBOARD</h1>
               <div id="earth"></div>
+            </div>
+            <div id="warningsData">
+              <h1>WARNINGS</h1>
+            </div>
+            <div id="get_doseData">
+              <h1>GET_DOSE</h1>
+            </div>
+            <div id="instructionsData">
+              <h1>INSTRUCTIONS</h1>
+            </div>
           </div>
           <div class="content3">
           </div>
@@ -80,7 +89,7 @@
   </script>
 
   <script src="assets/javascript/three.min.js"></script>
-
+  <script src="assets/javascript/divVisibility.js"></script>
   <script src="assets/javascript/three.js"></script>
 </body>
 
