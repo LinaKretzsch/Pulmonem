@@ -1,4 +1,6 @@
 // Div hide and show functionlity
+console.log('div visability loaded');
+
 let dashboard = document.getElementById('dashboard');
 let wanrings = document.getElementById('wanings');
 let get_dose = document.getElementById('get_dose');
