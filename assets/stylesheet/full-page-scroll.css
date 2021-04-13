@@ -227,27 +227,27 @@ a:hover {
 
 #earth {
   /* transform: translateY(-12vw); */
-  width: 12vw;
-  height: 25vh;
+  width: 20%;
+  height: 60%;
   background: url('/assets/Textures/outline3.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: repeat-x;
   border-radius: 50%;
-  background-size: 25vw;
+  background-size: 180%;
   -webkit-animation-name: rotate;
-  -webkit-animation-duration: 4s;
+  -webkit-animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -moz-animation-name: rotate;
-  -moz-animation-duration: 4s;
+  -moz-animation-duration: 20s;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: linear;
   -ms-animation-name: rotate;
-  -ms-animation-duration: 4s;
+  -ms-animation-duration: 20s;
   -ms-animation-iteration-count: infinite;
   -ms-animation-timing-function: linear;
   animation-name: rotate;
-  animation-duration: 10s;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   position: relative;
