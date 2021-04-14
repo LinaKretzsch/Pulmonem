@@ -33,18 +33,97 @@
         <div class="contentRightWrapper">
 
           <div class="navBar">
-            <div><a href="">Dashboard</a></div>
-            <div><a href="">Warnings</a></div>
-            <div><a href="">Get_Dose</a></div>
-            <div><a href="">Instructions</a></div>
+            <div id="dashboardButton"><a>Dashboard</a></div>
+            <div id="warningsButton"><a>Warnings</a></div>
+            <div id="get_doseButton"><a>Get_Dose</a></div>
+            <div id="instructionsButton"><a>Instructions</a></div>
           </div>
 
-          <div class="content2">
-              <div id="data">
-                <h3>Data</h3>
+          <div class="content2" id="dashboard">
+
+              <div class="dataLeft">
+                <h3>Live Update Feed</h3>
+                <p>
+                  Success rate: 64%<br>
+                  Total Procedures: 3226<br>
+                  Total Phage Dose: 1348<br>
+                  <br>
+                  Average Phase Dose/Success: 4.96<br>
+                  Average Phase Dose/Failure: 1.43<br>
+                  <br>
+                  Maximum Allowed Doses/Adult: 6<br>
+                  Maximum Recommended Doses/Adult: 5<br>
+                  Maximum Allowed Doses/Child: 4<br>
+                  Maximum Recommended Doses/Child: 3
+                </p>
               </div>
-              <div id="earth"></div>
-          </div>
+          
+              <div class="dataRight">
+                <div id="earth">
+                </div>
+                  <p>
+                    Oxygen Level: 14% <br>
+                    AQI: 3
+                  </p>
+              </div>
+
+
+            </div> <!-- End of Content2 Dashboard-->
+
+            <!-- Warnings -->
+            <div class="content2" id="warnings">
+
+                <div class="dataLeft">
+                  <h3>Warnings</h3>
+                  <p>
+
+                  </p>
+                </div>
+
+                <div class="dataRight">
+
+                    <p>
+
+                    </p>
+                </div>
+              </div> <!-- End of Content2 Warnings-->
+
+
+              <div class="content2" id="get_dose">
+
+                  <div class="dataLeft">
+                    <h3>Get_Dose</h3>
+                    <p>
+
+                    </p>
+                  </div>
+
+                  <div class="dataRight">
+
+                      <p>
+
+                      </p>
+                  </div>
+                </div> <!-- End of Content2 Get Dose-->
+
+
+                <div class="content2" id="instructions">
+
+                    <div class="dataLeft">
+                      <h3>Instructions</h3>
+                      <p>
+
+                      </p>
+                    </div>
+
+                    <div class="dataRight">
+
+                        <p>
+
+                        </p>
+                    </div>
+                  </div> <!-- End of Content2 Instructions-->
+
           <div class="content3">
           </div>
       </section>
@@ -80,7 +159,7 @@
   </script>
 
   <script src="assets/javascript/three.min.js"></script>
-
+  <script src="assets/javascript/divVisibility.js"></script>
   <script src="assets/javascript/three.js"></script>
 </body>
 
