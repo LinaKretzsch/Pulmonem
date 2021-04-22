@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Full page scroll</title>
+  <title>Pulmonem</title>
   <link rel="stylesheet" type="text/css" href="assets/stylesheet/full-page-scroll.css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
 
@@ -16,7 +16,7 @@
       <!-- <div class="logo"> -->
       <!-- <img  class="glow" src="assets/Textures/logoImg.png"> -->
       <div class="logoTextContainer">
-        <image src="assets/Textures/logoImg3.png">
+        <image id ="logo" src="assets/Textures/LogoWhite2.png">
           <!-- <h1 class="logoText1">PULM</h1>
             <h1 class="logoText2">O</h1>
             <h1 class="logoText3">NEM</h1> -->
@@ -27,6 +27,24 @@
     <section class="section2">
       <div class="modelContent">
         <div class="content1">
+          <div id="heightBar">
+            <p>
+              <br><br>
+              7 ft<br><br><br>
+              6 ft<br><br><br>
+              5 ft<br><br><br>
+              4 ft<br><br><br>
+              3 ft<br><br><br>
+              2 ft<br><br><br>
+              1 ft<br><br><br>
+            </p>
+          </div>
+          <div id="content1Data2">
+            <h3 id="content1Data2Header">Last Updated 02/05/2126</h3>
+          <div id="videoContainer1">
+            <image src="assets/video/turntable.gif"></image>
+          </div>
+        </div>
 
         </div>
 
@@ -41,30 +59,36 @@
 
           <div class="content2" id="dashboard">
 
-              <div class="dataLeft">
+              <div class="data1">
                 <h3>Live Update Feed</h3>
                 <p>
-                  Success rate: 64%<br>
-                  Total Procedures: 3226<br>
-                  Total Phage Dose: 1348<br>
+                  Success rate:&ensp; <a id="successRate">54</a> %<br>
+                  Total Procedures:&ensp; <a id="precedures">3226</a><br>
+                  Total Phage Dose:&ensp; <a id="phaseDose"> 1348 </a><br>
                   <br>
-                  Average Phase Dose/Success: 4.96<br>
-                  Average Phase Dose/Failure: 1.43<br>
+                  Average Phase Dose/Success:&ensp; <a id="avrgDoseSuccess">4.96</a><br>
+                  Average Phase Dose/Failure:&ensp; <a id="avrgDoseFailure">1.43</a><br>
                   <br>
-                  Maximum Allowed Doses/Adult: 6<br>
-                  Maximum Recommended Doses/Adult: 5<br>
-                  Maximum Allowed Doses/Child: 4<br>
-                  Maximum Recommended Doses/Child: 3
+                  Maximum Allowed Doses/Adult:&ensp; 6<br>
+                  Maximum Recommended Doses/Adult:&ensp; 5<br>
+                  Maximum Allowed Doses/Child:&ensp; 4<br>
+                  Maximum Recommended Doses/Child:&ensp; 3
                 </p>
               </div>
-          
-              <div class="dataRight">
+
+              <div class="data2">
                 <div id="earth">
                 </div>
-                  <p>
-                    Oxygen Level: 14% <br>
-                    AQI: 3
+                  <p id="globeData">
+                    <br><br>
+                    Country: &ensp; <a id="country"></a><br>
+                    Oxygen Level: &ensp; <a id="oLevel"></a> <br>
+                    AQI: &ensp; <a id="aqi"></a>
                   </p>
+              </div>
+
+              <div class="data3">
+
               </div>
 
 
@@ -125,16 +149,240 @@
                   </div> <!-- End of Content2 Instructions-->
 
           <div class="content3">
-          </div>
+            <div id="content3Data1">
+              <h4>Get Involved</h4>
+              <p>
+                <a>Anonymous Interview</a><br>
+                <a>Anonymous Participation</a><br>
+                <a>Signed Particpation</a><br>
+                <a>More</a><br>
+              </p>
+            </div>
+
+            <div id="content3Data2">
+              <p id="emergencyLine">
+                Emergency Line
+              </p>
+              <p id="makeDonation">
+                <a>Make Donation</a>
+              </p>
+            </div>
+
+
+            <div id="content3Data3">
+              <image id="bitcointLogo" src="assets/Textures/bitcoinLogo.png"></image>
+              <image id="priateLogo" src="assets/Textures/pirateLogo.png"></image>
+
+            </div>
       </section>
-      <section class="section3">
-        <div class="forum glow">
-          <h1>Forum</h1>
-        </div>
-      </div>
-    </section>
+
+
+      <!-- /* ################################################### */
+      /* FORUM CODE */ -->
+      <!-- /* ################################################### */ -->
+            <section class="section3">
+              <div class="modelContentForum">
+
+
+                <div class="contentRightWrapper">
+                  <div class="navBarForum">
+                    <div id="forumTitle"><h1>FORUM</h1></div>
+                    <div id="searchBarContainer">
+                      <img src="assets/icons/search.png" alt="search" class="images" style="height:1.2vw; width:auto;transform:translateY(80%); cursor: pointer;">
+                      <div id="searchBar">
+                        <p>Search Topics</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content2forum" id="dashboardForum">
+                    <div class="forumPost">
+                      <p>Anonymous Bongo</p>
+                      <div class="innerWrapperPost">
+                        <p>This worked so well for me.</p>
+                        <img src="assets/pics/lung13.png" alt="lung1" class="images">
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Dingo</p>
+                      <div class="innerWrapperPost">
+                        <p>WARNING It started eating my whole chest area?? What do I do?! </p>
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Gecko</p>
+                      <div class="innerWrapperPost">
+                        <p>Mine seems look kind of funky and spiky, how do I know when it's working properly?</p>
+                        <img src="assets/pics/lung5.png" alt="lung5" class="images">
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Rhino</p>
+                      <div class="innerWrapperPost">
+                        <p>HELP It has eaten my entire body. Here is a picture of me. Help.</p>
+                        <img src="assets/pics/lung4.png" alt="lung4" class="images">
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Heron</p>
+                      <div class="innerWrapperPost">
+                        <p>This worked so well for me.</p>
+                        <img src="assets/pics/lung1.png" alt="lung2" class="images">
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Lemur</p>
+                      <div class="innerWrapperPost">
+                        <p>Hi folks. This was working so well for me, but after my 2nd dose it started growing strangely. Now I have lung tissue coming out of my forehead and parts on my legs and even some between my toes. I'm getting worries, does anyone have a quick remedy without stopping the procedure?</p>
+                        <img src="assets/pics/lung3.png" alt="lung3" class="images">
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Prawn</p>
+                      <div class="innerWrapperPost">
+                        <p>@Admin hi I went to go pick up my package and I couldnt find it. What is procedure, do we need to report it? Someone might have found it I don't know if it's safe. Also can I get a replacement?</p>
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Skunk</p>
+                      <div class="innerWrapperPost">
+                        <p>This worked so well for me.</p>
+                        <img src="assets/pics/lung6.png" alt="lung6" class="images">
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Zebra</p>
+                      <div class="innerWrapperPost">
+                        <p>This worked so well for me.</p>
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Okapi</p>
+                      <div class="innerWrapperPost">
+                        <p>This worked so well for me.</p>
+                        <img src="assets/pics/lung11.png" alt="lung11" class="images">
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Snake</p>
+                      <div class="innerWrapperPost">
+                        <p>This worked so well for me.</p>
+                        <img src="assets/pics/lung7.png" alt="lung7" class="images">
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Sloth</p>
+                      <div class="innerWrapperPost">
+                        <p>This worked so well for me.</p>
+                        <img src="assets/pics/lung8.png" alt="lung8" class="images">
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Llama</p>
+                      <div class="innerWrapperPost">
+                        <p>This worked so well for me.</p>
+                        <img src="assets/pics/lung9.png" alt="lung9" class="images">
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Moose</p>
+                      <div class="innerWrapperPost">
+                        <p>So my external tissue feels fine but it's developed this strange bloody look? Is that something to be concerned about?</p>
+                        <img src="assets/pics/lung10.png" alt="lung10" class="images">
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="forumPost">
+                      <p>Anonymous Goose</p>
+                      <div class="innerWrapperPost">
+                        <p>This worked so well for me.</p>
+                        <div class="footnotePosts">
+                          <button>View Comments (1)</button>
+                          <button>Leave Comment</button>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+                <div class="sideNavForum">
+                  <div id="sideNavTitle"><h1>CATEGORIES</h1></div>
+                  <div id="warningsButton"><a>Tips and Tricks</a></div>
+                  <div id="get_doseButton"><a>Warnings</a></div>
+                  <div id="instructionsButton"><a>Help Needed</a></div>
+                  <div id="instructionsButton"><a>Suggestions</a></div>
+                  <div id="instructionsButton"><a>Questions</a></div>
+                </div>
+
+              </div>
+
+          </section>
+          <!-- /* ################################################### */
+      /* TO HERE */ -->
+      <!-- /* ################################################### */ -->
+
+
+
     <section class="section4">
-      <div>
+      <div id="videoContainer2">
+        <video controls>
+          <source src="assets/video/RenderedVid2.mp4">
+        </video>
       </div>
     </section>
     <section class="section5">
@@ -161,6 +409,9 @@
   <script src="assets/javascript/three.min.js"></script>
   <script src="assets/javascript/divVisibility.js"></script>
   <script src="assets/javascript/three.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="assets/javascript/randomGen.js"></script>
+
 </body>
 
 </html>
