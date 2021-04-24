@@ -100,11 +100,12 @@
                 <div class="warningsData1">
                   <h3>Warnings</h3>
 
-                    <b><span class="redText">Heart warning:</span> This product contains high dosage of DNA altering substances.
-                      Individuals with diagnosed heart deseases are at 65% higher risk for fatal mutations.
+                    <b><span class="redText">Phage quality is inconsistent:</span> May need to administer treatment multiple times for success.
 
                     <br><br><span class="redText">When using this product:</span> Do not drive a vehicle or any sorts or operate machinery.
                     Act responsible for you and others.
+
+                    <br><br><span class="redText">Immune Reaction:</span> Phages may trigger immuno overreactions. A micro trial is recommended. Instructions here.
 
                     <br><br><span class="redText">For emergencies:</span> Do not visit a regular doctor or the hospital when you feel unwell,
                     contat us through the emergency line.
@@ -123,8 +124,8 @@
                         <li>May cause nausea</li>
                         <li>May cause severe chest pain</li>
                         <li>May cause headaches</li>
-                        <li>May cause temporariry loss or smell and taste</li>
-                        <li>May cause temporariry loss or smell and taste</li>
+                        <li>May cause temporariry loss of smell and taste</li>
+                        <li>May cause irritated skin around the chest area</li>
                         <li>May cause temporary shortage of breath</li>
 
 
@@ -136,18 +137,43 @@
 
               <div class="content2" id="get_dose">
 
-                  <div class="dataLeft">
+                  <div class="getDoseDataLeft">
                     <h3>Get_Dose</h3>
                     <p>
+                      Please fill in the below information to receive your dose.
+                      <br>Name:
+                      &emsp;&emsp;&emsp;&nbsp;
+                      <input type="text" id="inputField" value="Firstname Lastname"></input>
 
+                      <br> Date of birth:
+                      &nbsp;
+                      <input type="date" id="inputField" value="0000">
+
+                      <br> Gender:
+                      &emsp;&emsp;&nbsp;
+                      <input type="radio" id="radio" name="gender"><label for="gender">Female</label> </input>
+                      <input type="radio" id="radio" name="gender"> <label for="gender">Male</label><br> </input>
+
+                       Blood Type:
+                       &ensp;
+                      <input type="radio" id="radio" name="bloodType"><label for="O">O</label></input>
+                      <input type="radio" id="radio" name="bloodType"><label for="A">A</label></input>
+                      <input type="radio" id="radio" name="bloodType"><label for="AB">AB</label></input>
+                      <input type="radio" id="radio" name="bloodType"><label for="B">B</label></input>
+
+                      <br> R-Factor:
+                      &emsp;&ensp;&nbsp;
+                      <input type="radio" id="radio" name="rFactor"><label for="Positive">Positive</label></input>
+                      <input type="radio" id="radio" name="rFactor"><label for="Negative">Negative</label></input>
+                      <br><button id="submitData">Submit</button>
                     </p>
                   </div>
 
-                  <div class="dataRight">
 
-                      <p>
 
-                      </p>
+                  <div class="getDoseDataRight" id="map-container">
+                    <p id="mapText">Submit your data to receive the pickup location. Your will have 3 hours to retrieve your package.</p>
+                    <iframe id="mapData" src="" width="100%" height="100%"></iframe>
                   </div>
                 </div> <!-- End of Content2 Get Dose-->
 
@@ -164,7 +190,6 @@
                     <div class="dataRight">
 
                         <p>
-
                         </p>
                     </div>
                   </div> <!-- End of Content2 Instructions-->
@@ -407,8 +432,10 @@
       </div>
     </section>
     <section class="section5">
-      <div>
-      </div>
+
+
+
+
     </section>
 
 
@@ -426,6 +453,10 @@
       animateFunction: "ease",
     });
   </script>
+
+
+  <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript" src="assets/javascript/map.js"></script> -->
 
   <script src="assets/javascript/three.min.js"></script>
   <script src="assets/javascript/divVisibility.js"></script>

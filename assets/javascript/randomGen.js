@@ -27,7 +27,6 @@ function displayCountryData(index){
   if(countryAirQuality[index].aqi === 0){
     $('#aqi').css({color: "rgb(199, 0, 0)"});
   }
-
 }
 
 // Generates random value from 0 - 10 to call random slot from array containing country and air quality data
@@ -91,3 +90,33 @@ function incrementDoses(){
   currentNumber++;
   $("#phaseDose").text(currentNumber);
 }
+
+var coordinates = [{n: -73.56033828218284, w: 45.51563283706199}, {n: 73.570601, w: 45.532387}, {n: -73.548496, w: 45.559827},
+                    {n: -73.637100, w:45.610079}, {n:-73.652346, w:45.618454}, {n:-73.736112, w:45.495847}, {n:-73.604950, w:45.454126},
+                    {n: -73.651660, w:45.500230}, {n: -73.653314, w: 45.516909}, {n:  -73.687464, w: 45.528319}, {n: -73.688461, w: 45.544798}
+                  ];
+
+// let n = 73.56351002067234;
+// let w = 45.50855274378296;
+
+// create random numb from 0 arrray length - 1
+// display said location
+
+
+$("#submitData").click( () => {
+
+  let num = randNumb(0, coordinates.length - 1);
+  let n = coordinates[num].n;
+  let w = coordinates[num].w;
+
+  let url = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3527.861261778575!2d-" + -73.651660 + "!3d" + 45.500230 + "!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDMwJzMyLjYiTiA3M8KwMzMnNDcuOSJX!5e1!3m2!1sen!2sca!4v1619223411157!5m2!1sen!2sca";
+
+  console.log(url);
+
+  $("#mapText").fadeOut(200);
+
+  $("#mapData").fadeIn(400);
+
+  $("#mapData").attr("src", url);
+
+});

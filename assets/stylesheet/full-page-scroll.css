@@ -904,3 +904,69 @@ video{
   width: 30%;
   filter: drop-shadow(0 0 0.2rem #b0f1ff);
 }
+
+.getDoseDataLeft p{
+  line-height: 230%;
+  padding-left: 0;
+  font-size-adjust: auto;
+}
+
+.getDoseDataRight {
+  width: 30%;
+  height: 80%;
+  border: solid #b0f1ff;
+  border-radius: 10px;
+  border-width: thin;
+  box-shadow: 0 0 5px #b0f1ff;
+  background-color: rgba(176, 241, 255, 0.2);
+  display: flex;
+}
+
+.getDoseDataRight p {
+  align-self: center;
+}
+
+
+#map-container {
+  width: 40%;
+  height: 80%;
+}
+
+
+
+#mapData {
+  border: none;
+  opacity: 50%;
+  filter: grayscale(80%) hue-rotate(190deg) contrast(120%);
+  border-radius: 5%;
+  display: none;
+}
+
+input[type=text], input[type=date], button {
+  border: 2px solid;
+  border-radius: 5%;
+  background-color: rgba(176, 241, 255, 0.2);
+  color: rgba(176, 241, 255, 0.5);
+  font-family: monospace;
+  width: 35%;
+  padding: .5%;
+  transition: 2s;
+}
+
+
+input[type=checkbox], {
+  background-color: rgba(176, 241, 255, 0.2);
+}
+
+button:hover {
+  color: rgba(176, 241, 255, 1);
+}
+
+input#radio:checked ~ .checkmark {
+  background-color: rgba(176, 241, 255, 1);
+}
+
+input#radio {
+  opacity: 0.5;
+  color: rgba(176, 241, 255, 1);
+}
