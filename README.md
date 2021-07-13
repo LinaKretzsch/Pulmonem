@@ -6,9 +6,9 @@ The project Pulmonem is a speculative web project created for the project Studio
 ### Technical Background
 The website was created using an online template for full page scrolling and a to create the animated background. The following langauges were used: CSS, Html, JavaScript, JQuery and Three.js.
 
-### Bugs to fix
+### What needs to be fixed
 This project is not finished yet. To create a smoother experience I would like to implement the following fixes in the future: 
-1. Use bootstrap to simplfy and decrease the size of the extensive css file and to have a nicer and better responsiveness of the grid.
+1. Use bootstrap to simplfy and decrease the size of the extensive css file and to have a nicer and better responsiveness of the grid. 
 2. Implement soundtrack to contribute to the overall experience. 
 
 
