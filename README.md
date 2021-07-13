@@ -11,4 +11,4 @@ This project is not finished yet. To create a smoother experience I would like t
 1. Use bootstrap to simplfy and decrease the size of the extensive css file and to have a nicer and better responsiveness of the grid.
 2. Implement soundtrack to contribute to the overall experience. 
 
-Project Link: https://linakretzsch.github.io/Pulmonem
+## Project Link: https://linakretzsch.github.io/Pulmonem
